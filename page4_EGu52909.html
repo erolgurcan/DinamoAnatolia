@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Erol">
+        <title>Join Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles_EGu52909.css">
+        <link rel = "stylesheet" href = "css/navigation_EGu52909.css">
+        <script src = "script/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" alt="logo">
+        </header>
+        <nav>
+            <nav>
+                <div class = "nav" id="one"><a href = "index.html">Main Page</a></div>
+                <div class = "nav" id= "two"><a href = "page2_EGu52909.html">News</a></div>
+                <div class = "nav" id = "three"><a href = "page3_EGu52909.html">Team</a></div>
+                <div class = "nav" id = "four"><a href = "page4_EGu52909.html">Join Us</a></div>
+            </nav>
+        </nav>
+        <article id="joinUs">
+            <h1 class="pageBanner">Do You Want To Join Our Club?</h1>
+            <h2>Prepare your soccer card and submit right now..</h2>
+            <form id="candidateForm" name="myForm" action='' method="get">
+                <fieldset id ="left" name = "myfieldSet">
+                    <legend>Player Information</legend>
+                    <label for ="candidateName">Enter Your Name </label>
+                    <input type = "text" name="candidateName" id="candidateName" placeholder = "Name" required>
+
+                    <label for ="candidateSurName">Enter Your Last Name </label>
+                    <input type = "text" name="candidateSurName" id="candidateSurName" placeholder="Surname" required>
+
+                    <label for ="candidateEmail">Enter Your Email</label>                    
+                    <input type = "email" name="candidateEmail" id="candidateEmail" placeholder="xxx@xxx.com" required>
+
+                    <label for ="candidatePhone">Enter Your Phone Number</label>                    
+                    <input type = "text" name="candidatePhone" id="candidatePhone" placeholder = "XXX-XXX-XX-XX" required pattern="\d{7}">
+
+                    <label for = "candidateEmail">Choose Your Position</label>
+                    <select id = "choosePosition" name="choosePosition">
+                        <option>Goal Keeper</option>
+                        <option>Center Back</option>
+                        <option>Right Back</option>
+                        <option>Left Back</option>
+                        <option>Middle Fielder</option>
+                        <option>Right Wing</option>
+                        <option>Left Wing</option>
+                        <option>Striker</option>
+                    </select>
+                    <div>
+                        <label for="candidateColor">Choose Your Card Color</label>
+                        <span  class ="candidate" id = "candidateCardColor">
+                            <input type ="radio" name = "candidateColor" id = "candidateColor" value="#FF8468" 
+                            onclick="changeCardColor(this)">Orange</input> 
+                            <input type ="radio" name = "candidateColor" id = "candidateColor" value="#918CB8"
+                            onclick="changeCardColor(this)">Dark Grey</input> 
+                            <input type ="radio" name = "candidateColor" id = "candidateColor" value="#00B28D"
+                            onclick="changeCardColor(this)">Green</input> 
+                            <input type ="radio" name = "candidateColor" id = "candidateColor" value="#3B48B4"
+                            onclick="changeCardColor(this)">Dark Blue</input> 
+                        </span>
+                    </div>
+                    <div>
+                        <label for="candidateBorderColor">Choose Your Card Color</label>
+                        <span class ="candidate" id = "candidateBorderColor">
+                            <input type ="radio" name = "candidateBorderColor" id = "candidateBorderColor" value="#DDFF00" 
+                            onclick="changeCardBorderColor(this)">Yellow</input> 
+                            <input type ="radio" name = "candidateBorderColor" id = "candidateBorderColor" value="#009A80"
+                            onclick="changeCardBorderColor(this)">Light Green
+                        </input>
+                    </div>
+                    <div>
+                    <label for ="candidateEmoji">Choose Your Emoji</label>  
+                    <span class="candidate">
+                        <input type ="radio" name="candidateEmoji" id="candidateEmoji" value = "&#129417" onclick="changeEmoji(this)">Owl</input>
+                        <input type ="radio" name="candidateEmoji" id="candidateEmoji" value = "&#128125" onclick="changeEmoji(this)">Alian</input> 
+                        <input type ="radio" name="candidateEmoji" id="candidateEmoji" value = "&#128018" onclick="changeEmoji(this)">Monkey</input>  
+                    </span>
+                    </div>
+                    <input type="button" value="Enter Value" onclick="candidateText(form)"></input>
+                    <input type="reset"></input>                       
+                </fieldset>
+                <fieldset id="right">
+                    <legend>Player Card</legend>
+                    <div id = "playerCard">
+                        <p id="candidateEmj"></p>          
+                        <p class = "candidateFeatures" name = "candidateNameOutput" id="candidateNameOutput">Player Name: </p>
+                        <p class = "candidateFeatures"  name = "candidateEmailOutput" id = "candidateEmailOutput">Player Email: </p>
+                        <p class = "candidateFeatures" name = "candidatePhoheNumberOutput" id = "candidatePhoheNumberOutput">Player Phone Number</p>
+                        <p class = "candidateFeatures" name = "candidatePositionOutput" id = "candidatePositionOutput">Player Position: </p>
+                    </div>
+                    <input type="submit" value="Submit" onclick="validateForm(this.form)"></input>
+                </fieldset>
+                
+            </form>
+        </article>
+        <footer>
+            CSIS 1280 &copy; Erol Gurcan Fall 2021
+        </footer>
+
+    </body>
